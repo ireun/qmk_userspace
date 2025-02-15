@@ -37,12 +37,16 @@ for more options.
     #define TAPPING_TERM 200
 #endif
 
+
 #if defined(KEYBOARD_sofle_rev1)
 // Add RGB underglow and top facing lighting
 #    define WS2812_DI_PIN D3
 #    define RGB_DI_PIN D3
-#    define RGBLED_NUM 12
-#    define RGBLED_SPLIT { 6, 6 }
+// #    undef RGBLED_NUM
+// #    define RGBLED_NUM 12
+// #    undef RGBLED_SPLIT
+// #    define RGBLED_SPLIT { 6, 6 }
+// #    undef RGBLIGHT_LED_COUNT
 #    ifdef RGB_MATRIX_ENABLE
 #        define RGB_MATRIX_LED_COUNT RGBLED_NUM
 #        define RGB_MATRIX_SPLIT RGBLED_SPLIT

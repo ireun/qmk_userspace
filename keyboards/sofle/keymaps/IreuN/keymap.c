@@ -34,26 +34,26 @@ enum my_keycodes {
   FOO = SAFE_RANGE
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case FOO:
-      if (record->event.pressed) {
-        ucis_start();
-      } else {
-        // Do something else when release
-      }
-      return false; // Skip all further processing of this key
-    default:
-      return true; // Process all other keycodes normally
-  }
-}
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//   switch (keycode) {
+//     case FOO:
+//       if (record->event.pressed) {
+//         ucis_start();
+//       } else {
+//         // Do something else when release
+//       }
+//       return false; // Skip all further processing of this key
+//     default:
+//       return true; // Process all other keycodes normally
+//   }
+// }
 
-const ucis_symbol_t ucis_symbol_table[] = UCIS_TABLE(
-    UCIS_SYM("poop", 0x00AE),                // 💩
-    UCIS_SYM("rofl", 0x1F923),                // 🤣
-    UCIS_SYM("ukr", 0x1F1FA, 0x1F1E6),        // 🇺🇦
-    UCIS_SYM("look", 0x0CA0, 0x005F, 0x0CA0)  // ಠ_ಠ
-);
+// const ucis_symbol_t ucis_symbol_table[] = UCIS_TABLE(
+//     UCIS_SYM("poop", 0x00AE),                // 💩
+//     UCIS_SYM("rofl", 0x1F923),                // 🤣
+//     UCIS_SYM("ukr", 0x1F1FA, 0x1F1E6),        // 🇺🇦
+//     UCIS_SYM("look", 0x0CA0, 0x005F, 0x0CA0)  // ಠ_ಠ
+// );
 
  #define KC_COPY LCTL(KC_C)
  #define KC_PASTE LCTL(KC_V)
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,------------------------------------------------.                    ,---------------------------------------------------.
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   _______, KC_NUM,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_CIRC, KC_P7,  KC_P8,   KC_P9,   KC_PAST, KC_PIPE,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_CIRC, KC_P7,  KC_P8,   KC_P9,   KC_PAST, KC_BSPC,
   //|------+-------+--------+--------+--------+------|                   |--------+-------+--------+--------+--------+---------|#
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, FOO    , XXXXXXX,                   KC_PMNS, KC_P4,  KC_P5,   KC_P6,   KC_EQL,  _______,
   //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
