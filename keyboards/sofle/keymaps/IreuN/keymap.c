@@ -22,12 +22,12 @@
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(KC_F13, KC_F14),           ENCODER_CCW_CW(KC_PGDN, KC_PGUP) },
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_PGDN, KC_PGUP) },
     [1] = { ENCODER_CCW_CW(_______, _______),           ENCODER_CCW_CW(_______, _______) },
-    [2] = { ENCODER_CCW_CW(RGB_HUD, RGB_HUI),           ENCODER_CCW_CW(RGB_SAD, RGB_SAI) },
-    [3] = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI),           ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)},
+    [2] = { ENCODER_CCW_CW(UG_HUED, UG_HUEU),           ENCODER_CCW_CW(UG_SATD, UG_SATU) },
+    [3] = { ENCODER_CCW_CW(UG_VALD, UG_VALU),           ENCODER_CCW_CW(UG_PREV, UG_NEXT)},
     [4] = { ENCODER_CCW_CW(_______, _______),           ENCODER_CCW_CW(_______, _______) }
-    };
+};
 #endif
 
 enum my_keycodes {
