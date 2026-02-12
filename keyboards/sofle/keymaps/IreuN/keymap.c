@@ -85,6 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        KC_LWIN, KC_LALT, KC_LCTL, MO(2) , KC_ENT,  KC_SPC, MO(3), KC_RALT, KC_RCTL, KC_RWIN
 ),
 
+// NumPadLayer
 [4] = LAYOUT(
   //,------------------------------------------------.                    ,---------------------------------------------------.
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   _______, KC_NUM,  XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX,
